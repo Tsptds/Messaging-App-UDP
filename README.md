@@ -8,6 +8,8 @@ Build With C# .NET 8
 - Right click on the icon to see other pages. Also exit through here. Alt+F4 will only hide pages.
 ##
 - Send-Receive Messages To IPs using UDP
+- SQLite Database for Contacts and Messages
+
 - Manage Contacts
 - Manage Messages
 - Messages are Encrypted Using AES
