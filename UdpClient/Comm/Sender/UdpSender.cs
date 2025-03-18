@@ -18,7 +18,7 @@ namespace Texter_App.Comm.Sender
         {
             if (string.IsNullOrWhiteSpace(_message))
             {
-                Prompt.Alert(PromptStrings.Form.EmptyMessage);
+                //Prompt.Alert(PromptStrings.Form.EmptyMessage); // No need for this tbh
                 return;
             }
             // Define the server's IP address and UDP port.

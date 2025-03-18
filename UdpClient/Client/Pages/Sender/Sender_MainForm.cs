@@ -232,16 +232,6 @@ namespace Sender
         {
             GetMessageAndShow(e.RowIndex, e.ColumnIndex);
         }
-
-        private void chatLogBox_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if (_chatLog.CurrentCell == null) return;
-
-            if (e.KeyChar.Equals((char)Keys.Enter) || e.KeyChar.Equals((char)Keys.Space))
-            {
-                GetMessageAndShow(_chatLog.CurrentCell.RowIndex, _chatLog.CurrentCell.ColumnIndex);
-            }
-        }
         private void GetMessageAndShow(int row, int col)
         {
             // If selected a non-header cell, display the entire row attributes in a new form
@@ -277,11 +267,6 @@ namespace Sender
             {
                 Prompt.Error(ex);
             }
-        }
-
-        private void btnDeleteChats_Click(object sender, EventArgs e)
-        {
-            DeleteSelectedMessages();
         }
 
         private void lblIp_MouseHover(object sender, EventArgs e)
@@ -365,6 +350,17 @@ namespace Sender
         {
             if (_chatLog.CurrentCell == null) return;
             GetMessageAndShow(_chatLog.CurrentCell.RowIndex, _chatLog.CurrentCell.ColumnIndex);
+        }
+
+        private void chatLogBox_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (_chatLog.CurrentCell == null) return;
+
+            if (e.KeyCode == Keys.Enter || e.KeyCode == Keys.Space)
+            {
+                e.SuppressKeyPress = true;
+                GetMessageAndShow(_chatLog.CurrentCell.RowIndex, _chatLog.CurrentCell.ColumnIndex);
+            }
         }
     }
 }

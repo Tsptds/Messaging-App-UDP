@@ -337,7 +337,7 @@
             chatLogBox.StandardTab = true;
             chatLogBox.TabIndex = 1;
             chatLogBox.CellDoubleClick += chatLogBox_CellDoubleClick;
-            chatLogBox.KeyPress += chatLogBox_KeyPress;
+            chatLogBox.KeyDown += chatLogBox_KeyDown;
             // 
             // messages
             // 
