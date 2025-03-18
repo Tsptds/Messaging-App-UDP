@@ -19,4 +19,4 @@ Build With C# .NET 8
 - To rename contact, right click after selecting it.
 ##
 - Message can be sent using enter key. For new line, press shift+enter.
-- Tab character used through shitf+tab.
+- Tab character used through shift+tab.
